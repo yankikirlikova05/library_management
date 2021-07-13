@@ -1,4 +1,7 @@
+#satın alınacak listesindekilere satın alma linkleri eklenebilir (en ucuz falan ya da cimri.com linki)
+
 import csv
+
 
 booksFile = "books.csv"
 #tüm kitapların olduğu csv dosyası olacak
