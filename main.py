@@ -1,3 +1,4 @@
+#satın alınacak kitaplar listesinden link eklenebilir
 import csv
 from tkinter import *
 
