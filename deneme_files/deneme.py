@@ -13,15 +13,17 @@ def remove(booksFile,bookid):
         reader = csv.reader(booksFile)
         for row in reader:
             recoveryArray.append(row)
-            if bookid == row[0]:
+            if bookid == int(row[0]):
                 recoveryArray.remove(row)
+                print(row)
+    
 
-    with open(booksFile,'w') as booksFile: 
+    with open("desktop/codes/library_manager/deneme_files/books2.csv",'w') as booksFile: 
         writer = csv.writer(booksFile)
         for row in recoveryArray:
-            writer.writerow([row[0]],[row[1]],[row[2]])
+            writer.writerow([row[0],row[1],row[2]])
 
 deneme = Book(0,"deneme",True)
 
-remove("books2.csv",deneme.bookid)
+remove("desktop/codes/library_manager/deneme_files/books2.csv",deneme.bookid)
 
