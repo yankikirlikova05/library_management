@@ -37,5 +37,10 @@ def remove(booksFile,bookid):
 
 
 def add(booksFile,bookid,bookName,isRead):
-    
+    newBook = Book(bookid,bookName,isRead)
+
+    with open(booksFile,"a") as booksFile:
+        writer = csv.writer(booksFile)
+        writer.writerow([str(newBook.bookid),newBook.name,str(newBook.isRead)])
+    print("added: ",newBook.name)
 
