@@ -2,7 +2,6 @@
 
 import csv
 
-
 booksFile = "books.csv"
 #tüm kitapların olduğu csv dosyası olacak
 #kitap class'ında kitap id, kitap adı, kitap okundu: true/false
@@ -34,8 +33,6 @@ def remove(booksFile,bookid):
 
 
 #zaten okunacaklar listesinde olan bir kitabı okundaya çevirme eklenecek
-
-
 def add(booksFile,bookid,bookName,isRead):
     newBook = Book(bookid,bookName,isRead)
 
@@ -44,3 +41,5 @@ def add(booksFile,bookid,bookName,isRead):
         writer.writerow([str(newBook.bookid),newBook.name,str(newBook.isRead)])
     print("added: ",newBook.name)
 
+def switch(booksFile,bookid):
+    
